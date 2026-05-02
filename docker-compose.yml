@@ -1,3 +1,4 @@
+
 services:
   # ============================================
   # ZOOKEEPER (gestionnaire pour Kafka)
@@ -148,11 +149,15 @@ services:
     depends_on:
       kafka:
         condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       KAFKA_TOPIC_INPUT: exchange-rates
       KAFKA_TOPIC_OUTPUT: exchange-alerts
       ALERT_THRESHOLD_PERCENT: 2.0
+      ELASTICSEARCH_HOST: http://elasticsearch:9200
+      ELASTICSEARCH_INDEX_ALERTS: exchange-alerts
     restart: unless-stopped
 
 networks:
