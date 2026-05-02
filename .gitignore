@@ -32,3 +32,11 @@ logs/
 producer/venv/
 consumer/venv/
 venv-tests/
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environnements de test
+venv-tests/
