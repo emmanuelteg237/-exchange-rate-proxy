@@ -1,0 +1,34 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv
+
+# Environnement
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker
+*.pid
+
+# (Bonus) venv locaux dans sous-dossiers
+producer/venv/
+consumer/venv/
+venv-tests/
